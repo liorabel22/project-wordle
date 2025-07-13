@@ -4,8 +4,8 @@ function Guess({ guess }) {
   return (
     <p className="guess">
       {
-        [...guess].map((letter, index) => (
-        <span key={`${letter}-${index}`}  className="cell">{letter}</span>
+        guess.map(({letter, status}, index) => (
+        <span key={`${letter}-${index}-${status}`}  className={`cell ${status}`}>{letter}</span>
         ))
       }
     </p>
