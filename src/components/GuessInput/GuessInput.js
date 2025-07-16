@@ -1,6 +1,6 @@
 import React from "react";
 
-function GuessInput({ handleGuessInput }) {
+function GuessInput({ handleGuessInput, disabled }) {
   const [guessInput, setGuessInput] = React.useState("");
 
   const submitGuessInput = (event) => {
@@ -27,6 +27,7 @@ function GuessInput({ handleGuessInput }) {
         pattern=".{5,}"
         maxLength="5"
         value={guessInput}
+        disabled={disabled}
         onChange={onInputChange}
       />
     </form>

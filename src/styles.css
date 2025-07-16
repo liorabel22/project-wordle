@@ -96,6 +96,21 @@ h1 {
   margin-bottom: 4px;
 }
 
+.key-row {
+    display: flex;
+    gap: 5px;
+    margin-block-end: 5px;
+    justify-content: center;
+}
+.letter-key {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ddd;
+    place-content: center;
+    text-align: center;
+}
 .cell {
   position: relative;
   width: 20%;
@@ -124,16 +139,19 @@ h1 {
   --radius: 0px 0px 0px 4px;
 }
 
+.letter-key.correct,
 .cell.correct {
   background: var(--color-success);
   border-color: var(--color-success);
   color: white;
 }
+.letter-key.incorrect,
 .cell.incorrect {
   background: var(--color-gray-300);
   border-color: var(--color-gray-300);
   color: white;
 }
+.letter-key.misplaced,
 .cell.misplaced {
   background: var(--color-warning);
   border-color: var(--color-warning);
